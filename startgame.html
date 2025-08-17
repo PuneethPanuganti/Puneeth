@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+        .screen {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First Screen -->
+    <div id="screen1" class="screen active">
+        <h1>Word Puzzle Game</h1>
+        <button onclick="nextScreen()">Start the Game</button>
+    </div>
+
+    <!-- Second Screen -->
+    <div id="screen2" class="screen">
+        <h1>Welcome to the Game!</h1>
+        <p>Get ready to play!</p>
+    </div>
+
+    <script>
+        function nextScreen() {
+            document.getElementById("screen1").classList.remove("active");
+            document.getElementById("screen2").classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
